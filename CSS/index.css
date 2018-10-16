@@ -1,0 +1,373 @@
+body{
+	margin: 0;
+	font-family: Arial, sans-serif;
+}
+.clear{
+	float: none;
+	clear: both;
+}
+.center{
+	width: 1135px;
+	margin: 0 auto;
+}
+a{
+	transition: 0.3s;
+	-webkit-transition: 0.3s;
+	-moz-transition: 0.3s;
+}
+
+#header{
+	padding: 25px 0;
+}
+#header .logo{
+	float: left;
+}
+#header .navigation{
+	float: right;
+}
+#header .navigation ul{
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+#header .navigation ul li{
+	display: inline-block;
+	font-size: 18px;
+	font-family: "Arial";
+}
+#header .navigation ul li a{
+	display: inline-block;
+	padding: 25px 25px 0 25px;
+	text-transform: uppercase;
+	color: #000000;
+	text-decoration: none;
+}
+#header .navigation ul li a:hover{
+	color: #0874ee;
+}
+
+
+#banner{
+	background-color: #0874ee;
+	background-image: url(../img/banner.jpg);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	padding: 145px 0;
+	color: #ffffff;
+	text-align: center;
+}
+#banner h1{
+	font-size: 44px;
+	font-family: "Arial";
+	font-weight: normal;
+	text-transform: uppercase;
+	margin: 0;
+}
+#banner h2{
+	font-size: 24px;
+	font-weight: normal;
+	margin-bottom: 30px;
+}
+.btn-primary{
+	border: solid 2px #ffffff;
+	color: #ffffff;
+	text-transform: uppercase;
+	font-size: 18px;
+	text-transform: none;
+	padding: 10px;
+	display: inline-block;
+	text-decoration: none;
+}
+.btn-primary:hover{
+	background-color: #ffffff;
+	color: #0874ee;
+}
+/*OurServices*/
+#ourServices{
+	padding: 25px 0;
+	font-family: "Arial";
+}
+#ourServices .title-content{
+	text-transform: uppercase;
+	font-size: 32px;
+	text-align: center;
+	margin-bottom: 40px;
+}
+.title-content .line{
+	width: 260px;
+	height: 2px;
+	background-color: #4a4a4a;
+	margin: auto;
+}
+.hidden{
+	display: none;
+}
+#ourServices .title-content span{
+	font-family: "Arial";
+	font-weight: bold;
+}
+.content-list .list-services{
+	animation-name: fadeInLeft;
+	animation-duration: 3s;
+	background-color: #0a63d2;
+	padding: 25px 50px;
+	float: left;
+	width: 40%;
+	color: #ffffff;
+}
+.content-list .list-services.last{
+	animation-name: fadeInRight;
+	animation-duration: 3s;
+	float: right;
+}
+.content-list .list-services h2{
+	text-transform: uppercase;
+	font-family: "Arial";
+	font-size: 24px;
+	margin-top: 0;
+}
+.content-list .list-services .text{
+	line-height: 25px;
+	margin-bottom: 20px;
+	font-size: 14px;
+}
+.content-list .list-services .btn a{
+	display: inline-block;
+	padding: 10px 15px;
+	border: solid 2px #ffffff;
+	text-decoration: none;
+	color: #ffffff;
+	text-transform: uppercase;
+	font-family: "Arial";
+	font-size: 12px;
+}
+.content-list .list-services .btn a:hover{
+	background-color: #ffffff;
+	color: #0a63d2;
+}
+/*subscribe*/
+#notification-subscribe{
+	padding: 25px 0;
+	background-color: #d7d7d7;
+	margin-top: 30px;
+}
+#notification-subscribe h2{
+	font-family: "Arial";
+	text-transform: uppercase;
+	font-size: 26px;
+	margin-bottom: 15px;
+}
+#notification-subscribe h3{
+	margin-top: 0px;
+	font-size: 18px;
+	font-family: "Arial";
+	font-weight: normal;
+}
+#notification-subscribe .content{
+	animation-name: slideTop;
+	animation-duration: 3s;
+	animation-timing-function: ease;
+}
+#notification-subscribe .left-content{
+	float: left;
+}
+#notification-subscribe .right-content{
+	float: right;
+	padding-top: 25px;
+}
+#notification-subscribe .big-btn{
+	display: inline-block;
+	background-color: #0b63cd;
+	font-family: "Arial";
+	font-size: 24px;
+	font-weight: bold;
+	padding: 15px 45px;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: #ffffff;
+}
+#notification-subscribe .big-btn:hover{
+	background-color: #222222;
+}
+
+#footer{
+	background-color: #222222;
+	padding: 20px 0;
+}
+#footer #logo{
+	float: left;
+	margin-top: 5px;
+	margin-left: 0;
+}
+#footer .cp{
+	float: right;
+	color: #ffffff;
+	font-size: 18px;
+	margin-top: 20px;
+}
+
+
+@media screen and (max-width: 1200px){
+	.center{
+		width: auto;
+		padding: 0 20px;
+		margin: 0;
+	}
+}
+
+@media screen and (max-width: 1100px){
+	.content-list .list-services{
+		width: 70%;
+		float: none;
+		display: block;
+		margin: auto;
+		animation-name: slideInLeft;
+		animation-duration: 2s;
+	}
+	.content-list .list-services.last{
+		width: 70%;
+		margin: auto;
+		float: none;
+		display: block;
+		margin-top: 20px;
+		animation-name: slideInRight;
+		animation-duration: 2s;
+	}
+	@keyframes slideInLeft{
+		from{opacity: .2; margin-left: -10%;}
+		to{opacity: 1; margin-left: 10%;}
+	}
+	@keyframes slideInRight {
+	from{opacity: .2; margin-right: -10%;}
+	to{opacity: 1; margin-right: 10%;}
+	}
+}
+
+@media screen and (max-width: 713px){
+	#banner h1{
+		font-size: 40px;
+	}
+}
+
+@media screen and (max-width: 710px){
+	.content-list .list-services{
+		width: auto;
+	}
+	.content-list .list-services.last{
+		width: auto;
+	}
+	#notification-subscribe .left-content{
+		float: none;
+	}
+	#notification-subscribe .right-content{
+		float: none;
+		text-align: center;
+	}
+	#notification-subscribe h2{
+		text-align: center;
+	}
+	#notification-subscribe h3{
+		text-align: center;
+	}
+}
+
+@media screen and (max-width: 675px){
+	#header #logo{
+		float: none;
+		text-align: center;
+	}
+	#header .navigation{
+		text-align: center;
+		float: none;
+	}
+	#header .navigation ul li a{
+		padding: 20px 20px 0 20px;
+	}
+	#banner h1{
+		font-size: 36px;
+	}
+	#banner h2{
+		font-size: 18px;
+		font-weight: normal;
+		margin-bottom: 30px;
+	}
+	#ourServices .title-content{
+	font-size: 28px;
+	}
+}
+
+@media screen and (max-width: 620px){
+	#footer{
+		background-color: #222222;
+		padding: 20px 0;
+	}
+	#footer #logo{
+		text-align: center;
+		float: none;
+	}
+	#footer #logo img{
+		width: 150px;
+	}
+	#footer .cp{
+		text-align: center;
+		float: none;
+		font-size: 14px;
+		margin-top: 10px;
+	}
+}
+
+@media screen and (max-width: 429px){
+	#banner h1{
+		font-size: 30px;
+	}
+	#banner h2{
+		font-size: 16px;
+	}
+	#ourServices .title-content{
+	font-size: 26px;
+	}
+	.title-content .line{
+	width: 225px;
+	}
+}
+
+@media screen and (max-width: 392px){
+	#header{
+		padding: 15px 0;
+	}
+	#header #logo img{
+		width: 200px;
+	}
+	#header .navigation ul li a{
+		padding: 10px 10px 0 10px;
+		font-size: 16px;
+	}
+	#banner h1{
+		font-size: 28px;
+	}
+	#banner h2{
+		font-size: 14px;
+	}
+	#ourServices .title-content{
+	font-size: 20px;
+	}
+	.title-content .line{
+	width: 200px;
+	}
+}
+
+
+@keyframes fadeInLeft {
+	from{opacity: .2; margin-left: -120px}
+	to{opacity: 1; margin-left: 0}
+}
+
+@keyframes fadeInRight {
+	from{opacity: .2; margin-right: -120px}
+	to{opacity: 1; margin-right: 0}
+}
+@keyframes slideTop {
+	from{margin-bottom: -40px}
+	to{margin-bottom: 0}
+}
